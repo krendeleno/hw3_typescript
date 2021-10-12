@@ -12,7 +12,7 @@ function getEffects(effectList: string[]) {
 }
 
 type OptionsColor = {
-    font?: string;
+    font: string;
     background?: string;
     effects?: string[];
 }
