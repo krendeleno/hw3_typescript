@@ -1,8 +1,12 @@
 export const Reset = '\x1b[0m';
+export type Color = keyof typeof fontColors;
+export type Effect = keyof typeof effects;
+
 
 type typeStringObject = {
     [key: string]: string
 }
+
 export const effects: typeStringObject = {
     bright: '\x1b[1m',
     dim: '\x1b[2m',

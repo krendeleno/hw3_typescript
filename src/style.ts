@@ -6,7 +6,7 @@ type OptionsColor = Parameters<typeof color>[1];
 type OptionsMd = Parameters<typeof markdown>[1];
 type Options = OptionsMd | OptionsColor;
 
-export function style(text: string, options: Options) {
+export function style(text: string, options: Options): string {
     if (text.length === 0) {
         return text;
     }
