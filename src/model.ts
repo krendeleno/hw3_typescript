@@ -2,12 +2,7 @@ export const Reset = '\x1b[0m';
 export type Color = keyof typeof fontColors;
 export type Effect = keyof typeof effects;
 
-
-type typeStringObject = {
-    [key: string]: string
-}
-
-export const effects: typeStringObject = {
+export const effects = {
     bright: '\x1b[1m',
     dim: '\x1b[2m',
     italic: '\x1b[3m',
@@ -15,7 +10,7 @@ export const effects: typeStringObject = {
     blink: '\x1b[5m',
 };
 
-export const fontColors: typeStringObject = {
+export const fontColors = {
     black: '\x1b[30m',
     red: '\x1b[31m',
     green: '\x1b[32m',
@@ -26,7 +21,7 @@ export const fontColors: typeStringObject = {
     white: '\x1b[37m',
 };
 
-export const backgroundColors: typeStringObject = {
+export const backgroundColors = {
     black: '\x1b[40m',
     red: '\x1b[41m',
     green: '\x1b[42m',
@@ -37,7 +32,7 @@ export const backgroundColors: typeStringObject = {
     white: '\x1b[47m',
 };
 
-export const contrast: typeStringObject = {
+export const contrast: Record<Color, Color> = {
     black: 'white',
     red: 'black',
     green: 'black',

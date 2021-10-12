@@ -1,4 +1,4 @@
-import {Color, backgroundColors, effects, fontColors, Reset} from './model';
+import {Color, Effect, backgroundColors, effects, fontColors, Reset} from './model';
 
 function addColor(text: string, color: Color, isBackground = false) {
     if (isBackground) {
@@ -7,14 +7,14 @@ function addColor(text: string, color: Color, isBackground = false) {
     return text + fontColors[color];
 }
 
-function getEffects(effectList: string[]) {
+function getEffects(effectList: Effect[]) {
     return effectList.map(effect => effects[effect]).join('');
 }
 
 type OptionsColor = {
-    font: string;
-    background?: string;
-    effects?: string[];
+    font: Color;
+    background?: Color;
+    effects?: Effect[];
 }
 
 export function color(text: string, options: OptionsColor): string {
