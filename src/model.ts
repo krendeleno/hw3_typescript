@@ -21,7 +21,7 @@ export const fontColors = {
     white: '\x1b[37m',
 };
 
-export const backgroundColors = {
+export const backgroundColors: Record<Color, string> = {
     black: '\x1b[40m',
     red: '\x1b[41m',
     green: '\x1b[42m',
@@ -32,7 +32,7 @@ export const backgroundColors = {
     white: '\x1b[47m',
 };
 
-export const contrast: Record<Color, Color> = {
+export const contrast: Record<Color, "black" | "white"> = {
     black: 'white',
     red: 'black',
     green: 'black',
