@@ -11,7 +11,7 @@ function getEffects(effectList: Effect[]) {
     return effectList.map(effect => effects[effect]).join('');
 }
 
-type OptionsColor = {
+export type OptionsColor = {
     font: Color;
     background?: Color;
     effects?: Effect[];

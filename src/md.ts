@@ -1,6 +1,6 @@
 import { color } from './colors';
 
-type OptionsMd = {
+export type OptionsMd = {
     bold?: boolean;
     italic?: boolean;
     mono?: boolean;

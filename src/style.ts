@@ -1,9 +1,9 @@
-import { color } from './colors';
-import { markdown } from './md';
+import { color, OptionsColor } from './colors';
+import { markdown, OptionsMd } from './md';
 
 
-type OptionsColor = Parameters<typeof color>[1];
-type OptionsMd = Parameters<typeof markdown>[1];
+// type OptionsColor = Parameters<typeof color>[1];
+// type OptionsMd = Parameters<typeof markdown>[1];
 type Options = OptionsMd | OptionsColor;
 
 export function style(text: string, options: Options): string {
